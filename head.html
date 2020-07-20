@@ -1,0 +1,65 @@
+<script type="text/javascript">
+  var nameEQ = "tarteaucitron=",
+      ca = document.cookie.split(';'), i, c, cookieSettings = '';
+  for (i = 0; i < ca.length; i += 1) {
+    c = ca[i];
+    while (c.charAt(0) === ' ') {
+      c = c.substring(1, c.length);
+    }
+    if (c.indexOf(nameEQ) === 0) {
+      cookieSettings = c.substring(nameEQ.length, c.length);//.replace('=',':');
+    }
+  }
+  // if dataLayer exist, we use its content
+  var dataLayer = window.dataLayer || [];
+  const cookieRef = ['googletagmanager', 'googleadwordsconversion', 'googleadwordsremarketing','analytics', 'facebookpixel', 'linkedinpixel', 'adroll','hotjar']
+  // go throught cookie setting
+  console.log('cookieSettings = ' + cookieSettings);
+  if (cookieSettings != '') {
+    const allCookies = cookieSettings.split("!");
+    var currentCookie = '';
+    //var name = '';
+    //var val = '';
+    for (i = 0; i < allCookies.length; i += 1) {
+      console.log("cookies[" + i + "]:" + allCookies[i]);
+      currentCookie = allCookies[i].split("=");
+      if (currentCookie != '') {
+        name = currentCookie[0];
+        val = (currentCookie[1] == 'false');
+        if (val) {
+          switch (name) {
+            case 'googletagmanager':
+              dataLayer.push({ 'googletagmanager': true });
+              break;
+            case 'googleadwordsconversion':
+              dataLayer.push({ 'googleadwordsconversion': true });
+              break;
+            case 'googleadwordsremarketing':
+              dataLayer.push({ 'googleadwordsremarketing': true });
+              break;
+            case 'analytics':
+              dataLayer.push({ 'analytics': true });
+              break;
+            case 'facebookpixel':
+              dataLayer.push({ 'facebookpixel': true });
+              break;
+            case 'linkedinpixel':
+              dataLayer.push({ 'linkedinpixel': true });
+              break;
+            case 'adroll':
+              dataLayer.push({ 'adroll': true });
+              break;
+            case 'hotjar':
+              dataLayer.push({ 'hotjar': true });
+              break;
+          }
+        }
+      }
+    }
+  }
+</script>
+
+
+<!-- Google Tag Manager -->
+
+<script>(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-PFMKZC4');</script><!-- End Google Tag Manager -->   

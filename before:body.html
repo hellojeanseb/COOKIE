@@ -1,0 +1,49 @@
+<script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/ozeoio/gdpr/tarteaucitron/tarteaucitron.js"></script>
+<script type="text/javascript">
+  tarteaucitron.init({
+    "hashtag": "#settings", /* Automatically open the panel with the hashtag */
+    "highPrivacy": false, /* disabling the auto consent feature on navigation? */
+    "orientation": "bottom", /* the big banner should be on 'top' or 'bottom'? */
+    "adblocker": false, /* Display a message if an adblocker is detected */
+    "showAlertSmall": false, /* show the small banner on bottom right? */
+    "cookieslist": true, /* Display the list of cookies installed ? */
+    "removeCredit": true, /* remove the credit link? */
+    "customCssFile": "cookie-bar.css"
+  });
+</script>
+
+
+
+<script type="text/javascript">
+  // linkedinpixel
+  (tarteaucitron.job = tarteaucitron.job || []).push('linkedinpixel');
+
+  // Adroll
+  (tarteaucitron.job = tarteaucitron.job || []).push('adroll');
+
+  //hotjar
+  (tarteaucitron.job = tarteaucitron.job || []).push('hotjar');
+
+//tarteaucitron.user.googletagmanagerId = 'GTM-PFMKZC4';
+//(tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
+  
+tarteaucitron.user.facebookpixelId = 'YOUR-ID'; tarteaucitron.user.facebookpixelMore = function () { /* add here your optionnal facebook pixel function */ };
+(tarteaucitron.job = tarteaucitron.job || []).push('facebookpixel');
+
+	// Google AdWords
+	(tarteaucitron.job = tarteaucitron.job || []).push('googleadwordsconversion');
+	tarteaucitron.user.adwordsremarketingId = null;
+	(tarteaucitron.job = tarteaucitron.job || []).push('googleadwordsremarketing');
+
+  //ANALYTICS
+	tarteaucitron.user.analyticsUa = 'UA-XXXXXXXX-X';
+	tarteaucitron.user.analyticsMore = function () { /* add here your optionnal ga.push() */ };
+	(tarteaucitron.job = tarteaucitron.job || []).push('analytics');
+  
+
+</script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFMKZC4"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
